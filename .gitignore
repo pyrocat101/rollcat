@@ -1,3 +1,6 @@
 *.py[co]
 *~
 .*.sw[opc]
+dist/*
+build/*
+*.egg-info

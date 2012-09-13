@@ -1,11 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-    fabulous.color
-    ~~~~~~~~~~~~~~
-
-    I implement support for standard 16-color color terminals.
-
-"""
 
 def esc(*codes):
     return "\x1b[%sm" % (";".join([str(c) for c in codes]))
