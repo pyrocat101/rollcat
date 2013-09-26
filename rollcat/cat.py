@@ -145,8 +145,7 @@ def print_help(opts={}):
     except KeyboardInterrupt:
         pass
 
-if __name__ == '__main__':
-
+def entry():
     opts = docopt(__doc__, help=False, version="rollcat 0.2.0")
 
     if opts['--help']:
@@ -167,3 +166,6 @@ if __name__ == '__main__':
         main(opts)
     except SchemaError as e:
         exit(e)
+
+if __name__ == '__main__':
+    entry()
