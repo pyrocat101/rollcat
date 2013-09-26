@@ -104,24 +104,24 @@ def main(opts):
 
     files = ['-'] if len(opts['FILE']) is 0 else opts['FILE']
     for file in files:
-        if file is '-':
-            fd = sys.stdin
-        else:
-            try:
+        try:
+            if file is '-':
+                fd = sys.stdin
+            else:
                 fd = open(file)
-                if sys.stdout.isatty() or opts['--force']:
-                    cat(fd, opts)
-                else:
-                    chunk = fd.read(8192)
-                    sys.stdout.write(chunk)
-                    if len(chunk) < 8192:
-                        break
-                fd.close()
-            except IOError as e:
-                print "rollcat: " + e.strerror
-                exit(1)
-            except KeyboardInterrupt:
-                pass
+            if sys.stdout.isatty() or opts['--force']:
+                cat(fd, opts)
+            else:
+                chunk = fd.read(8192)
+                sys.stdout.write(chunk)
+                if len(chunk) < 8192:
+                    break
+            fd.close()
+        except IOError as e:
+            print "rollcat: " + e.strerror
+            exit(1)
+        except KeyboardInterrupt:
+            pass
 
 def print_help(opts={}):
 
