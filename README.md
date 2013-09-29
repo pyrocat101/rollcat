@@ -13,3 +13,7 @@ Rollcat is a Python port of [lolcat](https://github.com/busyloop/lolcat).
 Make sure you have latest version of `setuptools`, then:
 
 `pip install rollcat`
+
+## License
+
+MIT
