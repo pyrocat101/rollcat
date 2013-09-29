@@ -2,12 +2,14 @@
 
 You don't need it.
 
-![Screenshot](http://i.minus.com/ibaIKeGRQJqXEa.png)
+![Screenshot](https://github.com/pyrocat101/rollcat/raw/master/screenshot.png)
 
 But you want it.
 
-Rollcat is a self-contained Python port of [lolcat](https://github.com/busyloop/lolcat).
+Rollcat is a Python port of [lolcat](https://github.com/busyloop/lolcat).
 
 ## Installation
+
+Make sure you have latest version of `setuptools`, then:
 
 `pip install rollcat`
